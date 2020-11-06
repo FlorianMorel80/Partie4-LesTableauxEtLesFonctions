@@ -49,21 +49,24 @@ let removeLastElement = function(array) {
 let createPerson = function() {
     // On peut le créer en assignant un littéral à une variable.
     // Contrairement au tableau simple, on utilise des accolades plutôt que des crochets.
-    person = { name: 'Jean', age: 45, city: 'Paris' };
-    return person;
+    let array = [];
+    array["name"] = "Jean";
+    array["age"] = 45;
+    array["city"] = "Paris";
+    return array;
 }
 
 //Exercice 10 : Retourner la valeur de l\'index nom du tableau person.', function() {
 let returnName = function(array) {
     // La propriété function.name est une propriété en lecture seule qui renvoie le nom de la fonction courante ou "anonymous" si celle-ci a été créée de façon anonyme.
-    return array.name;
+    return array['name'];
 }
 
 //Exercice 11 : Stocker tous les index du tableau person dans des variables séparées et les retourner dans une même phrase de type : "Bonjour, je suis Jean. J\'ai 45 ans et j\'habite Paris."', function() {
 let returnSentence = function(array) {
-    let name = array.name;
-    let age = array.age;
-    let city = array.city;
+    let name = array['name'];
+    let age = array.['age'];
+    let city = array.['city'];
 
     return 'Bonjour, je suis ' + name + '.' + ' J\'ai ' + age + ' ans et j\'habite ' + city + '.';
 }
